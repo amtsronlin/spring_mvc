@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import com.mkyong.web.jsonview.Views;
 
 public class User {
-
+	// Test sedcond commit Git
 	@JsonView(Views.Public.class)
 	String username;
 	String password;
