@@ -1,6 +1,7 @@
 <%@page session="false"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://journaldev.com/jsp/tlds/mytags" prefix="mytags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +12,22 @@
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css"
 	var="bootstrapCss" />
+<spring:url value="/resources/core/css/common.css"
+	var="commonCss" />
+<link href="" rel="stylesheet" />	
 <link href="${bootstrapCss}" rel="stylesheet" />
+<link href="${commonCss}" rel="stylesheet" />
 <link href="${coreCss}" rel="stylesheet" />
 
 <spring:url value="/resources/core/js/jquery.1.10.2.min.js"
 	var="jqueryJs" />
+<spring:url value="/resources/core/js/processwelcome.js"
+	var="processwelcomeJs" />
+<spring:url value="/resources/core/js/common.js"
+	var="commonJs" />
 <script src="${jqueryJs}"></script>
+<script src="${processwelcomeJs}"></script>
+<script src="${commonJs}"></script>
 </head>
 
 <nav class="navbar navbar-inverse">
@@ -28,13 +39,18 @@
 </nav>
 
 <div class="container" style="min-height: 500px">
-
+	<label>My autocomplete</label>
+	<mytags:custom inputStyle=";;"
+		selectSqlId="QP_ATC_600" name="areaOPRSearch.wh_id"
+		optionValue="output03" optionLabel="output01,output02"
+		mustMatch="true" value="" displayValue="">
+	</mytags:custom>
 	<div class="starter-template">
 		<h1>Search Form</h1>
 		<br>
 
 		<div id="feedback"></div>
-
+		
 		<form class="form-horizontal" id="search-form">
 			<div class="form-group form-group-lg">
 				<label class="col-sm-2 control-label">Username</label>
