@@ -72,4 +72,11 @@ public class AutocompleteController {
 		}
 		return output;
 	}
+	
+	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@ResponseBody
+	public AutocompleteBeanOutput autocompletePost(@RequestParam("parameters") String parameters, Model model) {
+
+		return autocomplete(parameters, model);
+	}
 }
