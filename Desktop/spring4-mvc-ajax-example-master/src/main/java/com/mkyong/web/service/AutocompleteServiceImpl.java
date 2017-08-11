@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 import com.mkyong.web.model.Autocomplete;
 import com.mkyong.web.model.AutocompleteBeanInput;
 
-@Service
+@Service 
+//@Transactional(rollbackFor = Exception.class)
 public class AutocompleteServiceImpl implements AutocompleteService {
 
 	@Override

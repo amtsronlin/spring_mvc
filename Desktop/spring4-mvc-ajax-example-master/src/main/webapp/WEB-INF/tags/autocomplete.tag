@@ -64,6 +64,6 @@
 	 arg02="${arg02}" arg03="${arg03}" arg04="${arg04}" arg05="${arg05}" arg06="${arg06}" arg07="${arg07}" arg08="${arg08}" arg09="${arg09}" arg10="${arg10}" arg11="${arg11}" arg12="${arg12}" arg13="${arg13}" 
 	 arg14="${arg14}" arg15="${arg15}" arg16="${arg16}" arg17="${arg17}" arg18="${arg18}" arg19="${arg19}" arg20="${arg20}"
 	 sourceType= "${sourceType }" sourceCallback= "${sourceCallback }"
-	 placeholder='<qp:message code="${placeHolder}"></qp:message>' style="${inputStyle}" selectedDisplayValue="${selectedDisplayValue}"/>
+	 placeholder='0034' style="${inputStyle}" selectedDisplayValue="${selectedDisplayValue}"/>
 	<input type="hidden" class="${cssInput }" name="${name}" value="${value}" />
 </div>

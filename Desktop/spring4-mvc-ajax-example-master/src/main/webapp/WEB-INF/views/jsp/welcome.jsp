@@ -12,12 +12,15 @@
 <spring:url value="/resources/core/css/hello.css" var="coreCss" />
 <spring:url value="/resources/core/css/bootstrap.min.css"
 	var="bootstrapCss" />
+<spring:url value="/resources/media/css/elements.css"
+	var="elementsCss" />
 <spring:url value="/resources/core/css/common.css"
 	var="commonCss" />
 <link href="" rel="stylesheet" />	
 <link href="${bootstrapCss}" rel="stylesheet" />
 <link href="${commonCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
+<link href="${elementsCss}" rel="stylesheet" />
+<%-- <link href="${coreCss}" rel="stylesheet" /> --%>
 
 <spring:url value="/resources/core/js/jquery.1.10.2.min.js"
 	var="jqueryJs" />
@@ -39,12 +42,80 @@
 </nav>
 
 <div class="container" style="min-height: 500px">
+	<!-- Custom table start -->
 	<label>My autocomplete</label>
-	<mytags:custom inputStyle=";;"
-		selectSqlId="QP_ATC_600" name="areaOPRSearch.wh_id"
-		optionValue="output03" optionLabel="output01,output02"
-		mustMatch="true" value="" displayValue="">
-	</mytags:custom>
+								<script id="tbl-96068-template" type="text/template">
+																<tr index="0">
+																	<td rowspan="1" class="qp-output-fixlength tableIndex result-no-number" style="; ">1</td>
+																		<td class='align-left enableGroupTd -1' index="0" style="text-align: left; ;"   >
+																<span style="width: 100%; float: left; padding-right: 3px; ">
+																							<mytags:custom inputStyle=";;"
+																								selectSqlId="QP_ATC_600" name="areaOPRSearch.wh_id"
+																								optionValue="output03" optionLabel="output01,output02"
+																								onChangeEvent="changeProduct"
+																								mustMatch="true" value="" displayValue="">
+																							</mytags:custom>
+																</span>			
+																	</td>
+																		
+																	<td style='text-align: center;;' rowspan="1">
+																		<a class="btn btn-default btn-xs glyphicon glyphicon-minus qp-button-action" title="" onclick="$.qp.removeRowJS('tbl-96068', this) ;" style="margin-top: 3px;" href="javascript:void(0)"></a>
+																	</td>
+								</script>
+						<!--Start Area enable header -->
+						<!--End Area enable header -->
+									<div class="" style="width: 100%; float:left;" name="areaOPRW_operation_restriction_dtl">
+									<div class="panel panel-default qp-div-select form-area-content   ">
+											<div class="panel-heading   ">
+													<span aria-hidden="true" class="glyphicon qp-heading-icon">&nbsp;</span>
+														<span class="qp-heading-text"><qp:message code="sc.6420863058358608059"/></span>
+											</div>
+											<div class="panel-body project-padding    ">
+													<table class="table table-bordered qp-table-list-none-action project-table-list-none-action" id="tbl-96068" style="">
+														<colgroup>
+																	<col width="21px">
+																	<col width="110px"></col>
+																	<col width="50px">
+														</colgroup>
+														<thead>
+																			<tr index="0">
+																							<th style="text-align: center; ; " >No</th>
+																			<th index="0" style=" "   >
+																				<label style="cursor: pointer; " class="">area</label>
+																			</th>
+																					<th width="35px" rowspan="1"></th>
+																			</tr>
+														</thead>
+														<tbody>
+																	<c:forEach var="item" items="${oPR_F30InputForm.areaOPRW_operation_restriction_dtl}" varStatus="status">
+																							<tr>
+																								<td class="qp-output-fixlength tableIndex result-no-number" style="; ">${status.index + 1}</td>
+																						<td class='align-left enableGroupTd  ' index="0" style=" "   itemCode= "wh_area_id">
+																					<span style="width: 100%; float: left; padding-right: 3px; ">
+																							<mytags:custom inputStyle=";;"
+																								selectSqlId="QP_ATC_600" name="areaOPRSearch.wh_id"
+																								optionValue="output03" optionLabel="output01,output02"
+																								onChangeEvent="changeProduct"
+																								mustMatch="true" value="" displayValue="">
+																							</mytags:custom>
+																					</span>
+																					</td>
+																						<td style='text-align: center; '>
+																							<a class="btn btn-default btn-xs glyphicon glyphicon-minus qp-button-action" title="" onclick="$.qp.removeRowJS('tbl-96068', this) ;" style="margin-top: 3px;" href="javascript:void(0)"></a>
+																						</td>																									
+																			</tr>
+																	</c:forEach>
+														</tbody>
+													</table>
+													<div class="qp-add-left">
+														<a class="btn btn-default btn-xs glyphicon glyphicon-plus qp-button-action" onclick="$.qp.addRowJSByLink(this) ; $.qp.initialAllPicker($('#96068')); generateEventForCustomAutocomplete();" style="margin-top: 3px;" href="javascript:void(0)"></a>
+													</div>
+											</div>
+										</div>
+										</div>
+						<!--Start Area enable header -->
+
+	<!-- Custom table end -->
 	<div class="starter-template">
 		<h1>Search Form</h1>
 		<br>

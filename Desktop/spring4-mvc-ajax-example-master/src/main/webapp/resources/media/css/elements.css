@@ -358,7 +358,7 @@ body.modal-open .datepicker {
 .qp-bd-input-autocomplete{
 	text-align: left;
 	width: 100%;
-	background-image: url(images/auto-complete-arrow-normal.gif);
+	background-image: url(images/auto-complete-arrow-normal.gif) !important;
 	background-color: #FFFFFF;
 	background-repeat: no-repeat;
 	background-position: right 4px;
